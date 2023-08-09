@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "730432343549",
+    "project_id": "logintest-iso",
+    "storage_bucket": "logintest-iso.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:730432343549:android:d7d9435a80816dcf03dd94",
+        "android_client_info": {
+          "package_name": "com.example.firebaselearn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "730432343549-vggp11oiur3edv3mom3euam3qpa6qjn5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNuWPBzpmaUhGDvnQfjiku89lzZx4rYI8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "730432343549-vggp11oiur3edv3mom3euam3qpa6qjn5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "730432343549-7h0cnvbbctun6fpmj3ah2se62ldv3i7q.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.firebaselearn.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
