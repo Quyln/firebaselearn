@@ -14,7 +14,15 @@
       },
       "oauth_client": [
         {
-          "client_id": "730432343549-vggp11oiur3edv3mom3euam3qpa6qjn5.apps.googleusercontent.com",
+          "client_id": "730432343549-efc1ufrf5hdnilj0q6c3b9urpeg34qv8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.firebaselearn",
+            "certificate_hash": "e3a2e112972c66b229115d87c0b114370955af1d"
+          }
+        },
+        {
+          "client_id": "730432343549-jjvhjbb174anga2bpf2p7c0d5mqtvfc1.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -27,7 +35,7 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "730432343549-vggp11oiur3edv3mom3euam3qpa6qjn5.apps.googleusercontent.com",
+              "client_id": "730432343549-jjvhjbb174anga2bpf2p7c0d5mqtvfc1.apps.googleusercontent.com",
               "client_type": 3
             },
             {
