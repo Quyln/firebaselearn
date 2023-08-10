@@ -1,5 +1,6 @@
 import 'package:firebaselearn/sign_up_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -9,10 +10,24 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  TextEditingController idcontroller = TextEditingController();
-  TextEditingController passcontroller = TextEditingController();
+  final idcontroller = TextEditingController();
+  final passcontroller = TextEditingController();
 
   bool showpassword = true;
+
+  Future signIn() async {
+    await FirebaseAuth.instance.signInWithEmailAndPassword(
+      email: idcontroller.text.trim(),
+      password: passcontroller.text.trim(),
+    );
+  }
+
+  @override
+  void dispose() {
+    idcontroller.dispose();
+    passcontroller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -67,7 +82,7 @@ class _LoginPageState extends State<LoginPage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              ElevatedButton(onPressed: () {}, child: Text('Login')),
+              ElevatedButton(onPressed: signIn, child: Text('Login')),
               SizedBox(
                 width: 20,
               ),
