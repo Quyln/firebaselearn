@@ -17,15 +17,25 @@ class _SignUpScreenState extends State<SignUpScreen> {
   final passcontroller = TextEditingController();
   final cfpasscontroller = TextEditingController();
 
+  @override
+  void dispose() {
+    namecontroller.dispose();
+    dobcontroller.dispose();
+    emailcontroller.dispose();
+    passcontroller.dispose();
+    cfpasscontroller.dispose();
+    super.dispose();
+  }
+
   Future signUp() async {
     if (confirmpass()) {
       await FirebaseAuth.instance.createUserWithEmailAndPassword(
           email: emailcontroller.text.trim(),
           password: passcontroller.text.trim());
 
-      addUserdetail(
+      addUserDetail(
         namecontroller.text.trim(),
-        dobcontroller.text,
+        dobcontroller.text.trim(),
         emailcontroller.text.trim(),
       );
     } else {
@@ -34,8 +44,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
     }
   }
 
-  Future addUserdetail(String name, String dob, String email) async {
-    await FirebaseFirestore.instance.collection('users').add({
+  Future addUserDetail(String name, String dob, String email) async {
+    await FirebaseFirestore.instance.collection('/users').add({
       'name': name,
       'dob': dob,
       'email': email,
@@ -61,16 +71,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
         dobcontroller.text = _pickDT.toString().split(' ')[0];
       });
     }
-  }
-
-  @override
-  void dispose() {
-    namecontroller.dispose();
-    dobcontroller.dispose();
-    emailcontroller.dispose();
-    passcontroller.dispose();
-    cfpasscontroller.dispose();
-    super.dispose();
   }
 
   @override
