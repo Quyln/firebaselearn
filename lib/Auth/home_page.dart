@@ -1,5 +1,4 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebaselearn/page_detail.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -27,12 +26,7 @@ class _HomePageState extends State<HomePage> {
             child: Text('Sign Out'),
             color: Colors.blue,
           ),
-          ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => DetailPage()));
-              },
-              child: Text('go to detail'))
+          // ElevatedButton(onPressed: () {}, child: Text('go to detail'))
         ],
       )),
     );
